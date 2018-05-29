@@ -1,39 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <title>Bootstrap 101 Template</title>
 
-    <!-- Bootstrap -->
-    <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap -->
+      <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-
-
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">Bienvenidos</h3>
-  </div>
-  <div class="panel-body">
-    Gracias por visitarnos
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
+         <script src="Ajax/login.js"></script>
+    </head>
+    <body>
+<div id="menu">
+<div class="container">
+      <div class="row">
+          <div class="col-sm-6 col-md-4 col-md-offset-4">
+              <h1 class="text-center login-title">Iniciar Sesión</h1>
+              <div class="account-wall">
+                  <img class="profile-img img-responsive center-block" src="resources/Img/Logo.png" 
+                      alt="">
+                  <form class="form-signin" method="POST">
+                  <input type="text" class="form-control" name= 'user' placeholder="Email" required autofocus>
+                  <input type="password" class="form-control" name = 'pass' placeholder="Password" required>
+                  <button class="btn btn-lg btn-primary btn-block" type="submit">
+                      Iniciar Sesión</button>    
+                  <a href="#" class="pull-right need-help">Si olvido su contraseña por favor de comunicarse con el administrador </a><span class="clearfix"></span>
+                  </form>
+              </div>
+          </div>
+      </div>
   </div>
 </div>
+    
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="resources/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+  </html> 
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="resources/bootstrap/js/bootstrap.min.js"></script>
-  </body>
-</html> 

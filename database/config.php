@@ -2,16 +2,16 @@
 //Datos de configuración
 
 //Servidor
-$host='localhost';
+$host='Jalejandrorr.me';
 
 //Usuario
-$user='root';
+$user='JAlejandroRR';
 
 //Password
-$password='ale12345';
+$password='Alejandro321!';
 
 //Base de datos
-$db='information_schema';
+$db='ITZO';
 
 //Sistema gestor de base de datos
 $dbType='mysqli';
