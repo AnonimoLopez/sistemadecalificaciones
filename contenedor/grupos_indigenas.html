@@ -1,0 +1,62 @@
+<form role="form" action="#" method="POST">
+    <div class="form-group">
+        <label for="descripcion">Grupo indigena</label>
+        <input type="text"  name="descripcion" class="form-control" id="descripcion" placeholder="Introduce el nombre">
+    </div>
+    <div class="form-group ">
+        <a  type="button" id="button" onclick="request('REGISTRAR');" class="btn btn-primary btn-lg btn-block login-button">Registrar</a>
+    </div>
+</form>
+
+<table >
+       
+</table>
+
+<div id='rows'>
+</div>	
+
+</div>
+
+<script type="text/javascript">
+    request("BUSCAR");
+
+    function request(a){
+        console.log("ENTRO")
+        var formData = {};
+        switch(a){
+            case "REGISTRAR":
+                formData.action="REGISTRAR"
+                formData.descripcion=$('input[name=descripcion]').val()
+            break;
+            case "BUSCAR":
+                formData.action="BUSCAR"
+            break;
+
+        }
+        $.ajax({
+            type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+            url         :  'contenedor/grupos_indigenas.php', // the url where we want to POST
+            data        : formData, 
+            dataType    : 'html', // what type of data do we expect back from the server
+            encode          : true
+        }).done(function(data) {
+            //console.log(data)
+            switch(a){
+                case "REGISTRAR":
+                    if (data > 0) {
+                        toastr.success('Datos agregados correctamente.', {timeOut: 5000})
+                        request("BUSCAR")
+                    } else {
+                        toastr.error('Ha ocurrido un error.')
+                    }
+                break;
+                case "BUSCAR":
+                    $('#rows').html(data);
+                    $('#usertable').dataTable();
+                break;
+            }
+        });
+    }
+
+</script>
+  
