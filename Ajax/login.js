@@ -25,7 +25,6 @@ $(document).ready(function() {
             .done(function(data) {
 
                 // log data to the console so we can see
-              
                  $('#menu').html(data);
                 // here we will handle errors and validation messages
             });
