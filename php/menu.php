@@ -38,7 +38,7 @@
 							$menu_padre.= '</ul> </li>';
 						}
 						if ($fila['HIJOS'] == '0'){
-					 		$menu_padre.= ' <li><a href="#">'.$fila['DESCRIPCION'].'</a></li>'  ;	
+					 		$menu_padre.= ' <li><a href="#" data-toggle="modal" data-target="#exampleModal"> '.$fila['DESCRIPCION'].'</a></li>'  ;	
 						}else{
 					 		$menu_padre.= '  
             						 <li class="dropdown-submenu">
@@ -151,4 +151,5 @@ function go(url){
         // stop the form from submitting the normal way and refreshing the page
         event.preventDefault();
 }
+
 </script>
