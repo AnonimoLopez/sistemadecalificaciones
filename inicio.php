@@ -25,7 +25,7 @@
 				}
 
 				if ($fila['HIJOS'] == '0'){
-                   	$menu_padre.= ' <li><a href="#" value="'.$fila['URL'].'">'.$fila['DESCRIPCION'].'</a></li>' ;
+                   	$menu_padre.= ' <li><a href="#" data-toggle="modal" data-target="#myModal" value="'.$fila['URL'].'">'.$fila['DESCRIPCION'].'</a></li>' ;
 				}else{
 				    $menu_padre.= '  <li class="dropdown">
 	        						  <a href="#" value="'.$fila['URL'].'" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">'.$fila['DESCRIPCION'].'<span class="caret"></span></a>
@@ -40,11 +40,11 @@
 						}
 
 						if ($fila['HIJOS'] == '0'){
-					 		$menu_padre.= ' <li><a  href="#" onclick="go(\''.$fila['URL'].'\');" value="'.$fila['URL'].'">'.$fila['DESCRIPCION'].'</a></li>'  ;	
+					 		$menu_padre.= ' <li><a  href="#" data-toggle="modal" data-target="#myModal" 	onclick="go(\''.$fila['URL'].'\');" value="'.$fila['URL'].'">'.$fila['DESCRIPCION'].'</a></li>'  ;	
 						}else{
 					 		$menu_padre.= '  
             						 <li class="dropdown-submenu">
-      							  <a class="test" tabindex="-1" onsubmit="go("'.$fila['URL'].'"")">'.$fila['DESCRIPCION'].'<span class="caret"></span></a>
+      							  <a class="test" tabindex="-1"  data-toggle="modal" data-target="#myModal" onsubmit="go("'.$fila['URL'].'"")">'.$fila['DESCRIPCION'].'<span class="caret"></span></a>
      							   <ul class="dropdown-menu">  
 		          				 ';
 		          		     $cerrarhijo=true;
@@ -121,8 +121,7 @@
         <p class="navbar-text navbar-left">Copyright (c) 2017. Todos los derechos reservados.</p>
         <p class="navbar-text navbar-right">Versión 0.1.0</p>
       </div> -->
-    </div>
- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+    </div>	
 
   <!-- Modal -->
   <div class="modal fade" style=" word-wrap: break-word"  id="myModal" role="dialog">
@@ -132,7 +131,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title">Menú</h4>
         </div>
         <div class="modal-body">
             <div id='contenedor'>
