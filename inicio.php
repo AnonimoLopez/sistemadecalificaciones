@@ -125,7 +125,7 @@
  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
   <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" style=" word-wrap: break-word"  id="myModal" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
@@ -138,7 +138,7 @@
             <div id='contenedor'>
     </div>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer style="width: 80%">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
